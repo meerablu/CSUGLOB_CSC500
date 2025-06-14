@@ -1,3 +1,4 @@
+###############program start #################
 import sys
 
 def mainprog(): # Defined function name mainprog
@@ -48,6 +49,5 @@ def mainprog(): # Defined function name mainprog
         print("Exiting program...")
         sys.exit() # Exit out from exception
 
-mainprog() # calling mainprog and running until exit
-
+if __name__ ==  '__main__': mainprog() #calling the main - mainprog to run
 
