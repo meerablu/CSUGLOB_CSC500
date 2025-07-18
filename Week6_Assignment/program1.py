@@ -211,7 +211,7 @@ def inventoryCartItems(ShoppingCart,typecommand): #Defined function to help user
                 itprem = requeststrinput("Which item do you want to remove? Enter Item# Or Name: ","combination")
 
                 if itprem.isdigit():
-                    print("indigits")
+                    #print("indigits")
                     if int(itprem) in itemchglist:
                         itp = itemchglist.get(int(itprem))
                         print(f"Remove {itp.item_name} ... from Cart ...")
