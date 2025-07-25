@@ -51,22 +51,28 @@ def requeststrinput(verbiage,checktype): # generic function defined to capture s
 
 
 
-def print_mycourse(): #Function to print the student's course details
+def print_mycourse(studentCourse): #Function to print the student's course details
     try:
         whileuserunexited = userwishestoexit()
         while whileuserunexited:
             print("*******************************************************************************")
             print(f"!!Welcome to Find My Course Program!!!")
-            studentname = requeststrinput("Please enter your Name: ",False)
+           
+            if studentCourse.student_name == "": #then the student's name is entered once via the object reference
+                studentname = requeststrinput("Please enter your Name: ",False)
+                studentCourse.student_name=studentname
+                print(f" Welcome {studentCourse.student_name.upper()}")
+            else:
+                print(f"Hi {studentCourse.student_name}")
+
             coursename = requeststrinput("Please enter your Course Name: ","list")
-            studentcourseobj = studentCourse(studentname,coursename)
+            studentCourse.course_name=coursename   
+            
+            print(f"You've entered Course Name: {studentCourse.course_name.upper()}")
 
-            print(f" Welcome {studentcourseobj.student_name.upper()}")
-            print(f"You've entered Course Name: {studentcourseobj.course_name.upper()}")
-
-            studentcourseobj.print_coursedetails()
+            studentCourse.print_coursedetails()
         
-            print_mycourse()
+            print_mycourse(studentCourse)
     except Exception as e: #catch all Try/Catch blocks
         print(f"An error occurred within func-print_mycourse(): {e}. Exiting program.") 
         sys.exit()
@@ -77,7 +83,7 @@ instructordict = {"CSC101":"Haynes","CSC102":"Alvarado","CSC103":"Rich","NET110"
 scheduledict = {"CSC101":"8:00a.m.","CSC102":"9:00a.m.","CSC103":"10:00a.m.","NET110":"11:00a.m.","COM241":"1:00p.m."}
 
 class studentCourse: #student course
-  def __init__(self, student_name, course_name): #constructor for class object 
+  def __init__(self, student_name="", course_name=""): #constructor for class object 
     self.student_name = student_name
     self.course_name = course_name
 
@@ -90,7 +96,7 @@ class studentCourse: #student course
     print(f"Course Instructor : {courseinstructor}")
     print(f"Course Schedule   : {courseschedule}")
         
-                  
-if __name__ ==  '__main__': print_mycourse() #calling the main - mainprog to run
+studentcourseobj = studentCourse()    #initialized the object using the defaults              
+if __name__ ==  '__main__': print_mycourse(studentcourseobj) #calling the main - mainprog to run
 
 #####################program end ####################################
