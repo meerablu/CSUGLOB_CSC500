@@ -1,1 +1,0 @@
-The program should let the user enter a course number and then it should display the course's room number, instructor, and meeting time.
