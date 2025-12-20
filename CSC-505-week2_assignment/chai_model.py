@@ -288,7 +288,7 @@ class PModel: #Defines the new PMModel class
                         print(f"{itp.process_number}:{itp.process_name} | {itp.process_description} | {itp.process_direction} <==")
                         file.write(f"{itp.process_number}:{itp.process_name} | {itp.process_description}  \n")
                         file.write(f"      A \n")
-                        file.write(f"      ] \n")     
+                        file.write(f"      | \n")     
                 
             
          
