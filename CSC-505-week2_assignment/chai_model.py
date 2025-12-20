@@ -179,7 +179,7 @@ def processPItems(ProcessList,typecommand): #Defined function to help user pick 
                     else:
                         print(f" Process#{itprem} NOT FOUND in list or is Invalid. ")
             else:
-                itprem = requeststrinput("Which atep do you want to modify? Enter StepNo#: ","string")
+                itprem = requeststrinput("Which step do you want to modify? Enter StepNo#: ","string")
 
                 if itprem.isdigit():
                     if int(itprem) in itemchglist:
