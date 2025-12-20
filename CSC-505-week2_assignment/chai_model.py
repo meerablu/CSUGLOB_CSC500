@@ -31,7 +31,19 @@ def requeststrinput(verbiage,checktype): # Function which is reusable for captur
                             return inputval  
                         else:
                             if inputval == 'q': # if the user enters a q or Q the program still ends
-                                checkinginputval=False                                                       
+                                checkinginputval=False  
+                        if inputval == 'q': # if the user enters a q or Q the program ends
+                            checkinginputval=False                                                  
+                        else:
+                            try:
+                                if inputval.isdigit():
+                                    return inputval
+                                else:
+                                    raise ValueError("Sorry! {inputval} is Invalid!")
+                                    inputval = input(verbiage).lower() 
+                            except ValueError:
+                                print(f"Sorry! {inputval} is Invalid!") # prompting the user for the expected input format
+                                inputval = input(verbiage).lower() 
                 elif checktype=="date": #this is for inputting data conforms to the format requirements
                         if inputval == 'q': # if the user enters a q or Q the program ends
                             checkinginputval=False                           
