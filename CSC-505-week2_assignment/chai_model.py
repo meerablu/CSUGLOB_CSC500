@@ -72,7 +72,7 @@ def requeststrinput(verbiage,checktype): # Function which is reusable for captur
     except Exception as e:
         print(f"An error occurred within func-requeststrinput(): {e}. Exiting program.") #prints the error mesage
 
-def print_functions(): #Defines the task tracker program and functionalities 
+def print_functions(): #Defines the model functionalities
     try:
         """MENU
             a - Define new process step to list
@@ -164,12 +164,12 @@ def processPItems(ProcessList,typecommand): #Defined function to help user pick 
 
             itemchglist = {}
             for index, item in enumerate(ProcessList.get_processes_in_list()):
-                print(f" Task#{(index+1)}: {item.process_name}") #prints the task list
+                print(f" StepNo#{(index+1)}: {item.process_name}") 
                 itemchglist.update({(index+1):item}) #using a dictionary to store the latest itp objects in the list
                 
            
             if typecommand == "r":
-                itprem = requeststrinput("Which task do you want to remove? Enter Task#: ","string")
+                itprem = requeststrinput("Which step do you want to remove? Enter stepno#: ","string")
 
                 if itprem.isdigit():
                     if int(itprem) in itemchglist:
@@ -230,7 +230,7 @@ def createProcessList(): # Function for instantiation of the Process object
         print(f"An error occurred within func-createProcessList(): {e}. Exiting program.")
         sys.exit() 
 
-def modifyProcessList(PItem): # Function for modifying the task object attributes
+def modifyProcessList(PItem): # Function for modifying the object attributes
     try:        
         print(f" Changing the details for {PItem.process_name} ")
 
@@ -270,7 +270,7 @@ class PModel: #Defines the new PMModel class
                 
     def modify_item(self,PItem):
         #Modifies the attributes of the step"
-        print("modifying task item...")
+        print("modifying process item...")
         upditp = modifyProcessList(PItem)
                            
     def get_num_processes_in_list(self):
