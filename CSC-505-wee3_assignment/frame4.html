@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Pet Profiles Wireframe</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f8f8f8; }
+    .container {
+      max-width: 480px;
+      margin: 40px auto;
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 28px 24px 24px 24px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .section-title {
+      font-size: 1.3em;
+      font-weight: bold;
+      margin-bottom: 10px;
+      margin-top: 24px;
+    }
+    .pet-list, .appointment-list, .reminder-list {
+      margin-bottom: 16px;
+    }
+    .pet-row, .appointment-row, .reminder-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #f9fafb;
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin-bottom: 8px;
+      font-size: 1em;
+    }
+    .pet-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .notif {
+      background: #ff5252;
+      color: #fff;
+      border-radius: 50%;
+      font-size: 0.85em;
+      padding: 2px 8px;
+      margin-left: 8px;
+    }
+    .add-btn {
+      display: inline-block;
+      background: #e3f2fd;
+      color: #1976d2;
+      border: 1px solid #90caf9;
+      border-radius: 4px;
+      padding: 8px 14px;
+      font-weight: bold;
+      font-size: 1em;
+      margin-bottom: 10px;
+      cursor: pointer;
+      text-align: center;
+    }
+    .back-btn {
+      display: block;
+      width: 100%;
+      background: #1976d2;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 12px 0;
+      font-size: 1em;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 28px;
+    }
+    .manage-link {
+      color: #1976d2;
+      text-decoration: underline;
+      font-size: 0.98em;
+      margin-left: 8px;
+      cursor: pointer;
+    }
+    .section-subtitle {
+      font-size: 0.98em;
+      color: #888;
+      margin-bottom: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Pet Profiles Section -->
+    <div class="section-title">
+      My Pet Profile(s)
+      <span class="manage-link">(Manage information)</span>
+    </div>
+    <div class="section-subtitle">Pet Profiles (Total: 3)</div>
+    <div class="pet-list">
+      <div class="pet-row">
+        <div class="pet-info">🐶 <a>Bella</a></div>
+        <div>Girl Age: 3 yrs</div>
+        <div class="notif">🔔 <a>1</a></div>
+      </div>
+      <div class="pet-row">
+        <div class="pet-info">🐱 <a>Max</a></div>
+        <div>Boy Age: 2 yrs</div>
+        <div class="notif">🔔 <a>2</a></div>
+      </div>
+      <div class="pet-row">
+        <div class="pet-info">🐰 <a>Daisy</a></div>
+        <div>Girl Age: 1 yr</div>
+        <div class="notif">🔔 0</div>
+      </div>
+    </div>
+    <div class="add-btn">➕ Add Pet</div>
+
+    <!-- Upcoming Appointments Section -->
+    <div class="section-title">Upcoming Appointments <span class="section-subtitle">(notification reminders)</span></div>
+    <div class="appointment-list">
+      <div class="appointment-row">
+        <div>📅 Bella - Vet Visit</div>
+        <div>2025-07-15 10:00</div>
+      </div>
+      <div class="appointment-row">
+        <div>📅 Max - Grooming</div>
+        <div>2025-07-18 14:00</div>
+      </div>
+      <div class="appointment-row">
+        <div>📅 Daisy - Vaccination</div>
+        <div>2025-07-20 09:00</div>
+      </div>
+    </div>
+    <div class="add-btn">➕ Add appointment</div>
+
+    <!-- Pet Reminders Section -->
+    <div class="section-title">Pet Reminders <span class="section-subtitle">(notification regimens)</span></div>
+    <div class="reminder-list">
+      <div class="reminder-row">
+        <div>⏰ Bella - Feed</div>
+        <div>Due: 7:00 AM</div>
+      </div>
+      <div class="reminder-row">
+        <div>⏰ Max - Medication</div>
+        <div>Due: 8:00 AM</div>
+      </div>
+      <div class="reminder-row">
+        <div>⏰ Daisy - Walk</div>
+        <div>Due: 6:00 PM</div>
+      </div>
+    </div>
+    <div class="add-btn">➕ Add Regimen</div>
+
+    <button class="back-btn">🏠 Back to Home</button>
+  </div>
+</body>
+</html>
+``

@@ -1,0 +1,25 @@
+Pet Daily Journal
+-------------------------------------------------
+| [{dogicon}] Select Pet: [Bella v]                     |
+|-----------------------------------------------|
+| Date: [______/______/______]                  |
+|-----------------------------------------------|
+| Pet Photos:                                   |
+| [ ++ Add Photo ] [Photo 1] [Photo 2] ...       |
+|   (Thumbnails, tap to view or add)            |
+|-----------------------------------------------|
+| Journal Entry:                                |
+|-----------------------------------------------|
+| [                                            ]|
+| Today I brought Bella out for the walk at 7am.|
+| It was cold in the morning but Bella          |
+| thrived in the cold and she even barked when  |
+| seeing squirrels chasing each other on bare   |
+| tree branches. I petted her and said good     |
+| girl and then she stuck her tongue out and    |
+| continued walking. It was a good day.         |
+| [                                            ]|
+|-----------------------------------------------|
+| [Save Entry][Cancel]                         |
+|   (Prominent buttons at bottom)               |
+-----------------------------------------------

@@ -1,0 +1,11 @@
+Pet Journal Entries – Bella {dogicon} |
+
+| Date | Photo | Daily Details |
+| 2026-01-01 | [{pic} Bella_1.jpg] | Walked in the park at 7:00 AM. Bella chased squirrels and played fetch. She ate Chicken kibble with carrots | Kitchen nap |
+| 2025-12-31 | [{pic} Bella_2.jpg] | Rainy morning walk at 8:00 AM. Bella wore her yellow raincoat. She ate Salmon & rice dog food | Kitchen nap |
+| 2025-12-30 | [{pic} Bella_3.jpg] | Evening stroll at 6:30 PM. Met other dogs and sniffed around. She ate Beef stew with sweet potato | Kitchen nap |
+| 2025-12-29 | [{pic} Bella_4.jpg] | Quick walk around the block at 7:15 AM. Bella was energetic. She ate Turkey & pumpkin mix | Bathroom nap |
+| 2025-12-28 | [{pic} Bella_5.jpg] | Long walk in the woods at 9:00 AM. Bella found a stick to carry. She ate Lamb & brown rice | Watch TV |
+
+[+ Add Journal Entry] (Prominent button at bottom) | | << Back page] >> Forward page (Prominent buttons / links at bottom)
+= Back to Home] (Prominent button at top or bottom)

@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pet Daily Journal Wireframe</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f8f8f8; }
+    .container {
+      max-width: 420px;
+      margin: 40px auto;
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 28px 24px 24px 24px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .form-title {
+      font-size: 1.2em;
+      font-weight: bold;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .form-group {
+      margin-bottom: 16px;
+    }
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
+    select, input[type="text"], input[type="date"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #bbb;
+      border-radius: 4px;
+      font-size: 1em;
+      margin-bottom: 6px;
+    }
+    .photo-thumbs {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+    .photo-thumb {
+      width: 40px;
+      height: 40px;
+      background: #eee;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2em;
+      color: #888;
+      border: 1px solid #ccc;
+    }
+    .add-photo {
+      background: #e3f2fd;
+      color: #1976d2;
+      border: 1px solid #90caf9;
+      border-radius: 6px;
+      padding: 6px 10px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1em;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .journal-entry-group {
+      position: relative;
+      margin-bottom: 16px;
+    }
+    .write-icon {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: #fff;
+      border-radius: 50%;
+      padding: 6px;
+      box-shadow: 0 1px 4px rgba(25,118,210,0.08);
+      border: 1px solid #1976d2;
+      color: #1976d2;
+      font-size: 1.3em;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1.5px solid #1976d2;
+      border-radius: 6px;
+      font-size: 1em;
+      min-height: 110px;
+      resize: vertical;
+      margin-bottom: 6px;
+      box-sizing: border-box;
+    }
+    .button-row {
+      display: flex;
+      gap: 12px;
+      margin-top: 18px;
+    }
+    button {
+      flex: 1;
+      padding: 10px 0;
+      border: none;
+      border-radius: 4px;
+      background: #1976d2;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    button.cancel {
+      background: #aaa;
+    }
+    .caption {
+      font-size: 0.95em;
+      color: #888;
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="form-title">Pet Daily Journal</div>
+    <div class="form-group">
+      <label for="pet-select">🐶 Select Pet:</label>
+      <select id="pet-select">
+        <option>Bella</option>
+        <option>Max</option>
+        <option>Daisy</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="journal-date">Date:</label>
+      <input type="date" id="journal-date">
+    </div>
+    <div class="form-group">
+      <label>Pet Photos:</label>
+      <div class="photo-thumbs">
+        <div class="add-photo">
+          <span>+</span> Add Photo
+        </div>
+        <div class="photo-thumb">Photo 1</div>
+        <div class="photo-thumb">Photo 2</div>
+        <!-- Add more thumbnails as needed -->
+      </div>
+      <div class="caption">(Thumbnails, tap to view or add)</div>
+    </div>
+    <div class="form-group journal-entry-group">
+      <label for="journal-entry">Journal Entry:</label>
+      <span class="write-icon" title="Write Entry">
+        <!-- Pencil/Edit SVG icon -->
+        <svg width="22" height="22" fill="none" stroke="#1976d2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 20h9"/>
+          <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/>
+        </svg>
+      </span>
+      <textarea id="journal-entry" placeholder="Write your journal entry here...">Today I brought Bella out for the walk at 7am.
+It was cold in the morning but Bella thrived in the cold and she even barked when seeing squirrels chasing each other on bare tree branches. I petted her and said good girl and then she stuck her tongue out and continued walking. It was a good day.</textarea>
+    </div>
+    <div class="button-row">
+      <button type="submit">Save Entry</button>
+      <button type="button" class="cancel">Cancel</button>
+    </div>
+  </div>
+</body>
+</html>

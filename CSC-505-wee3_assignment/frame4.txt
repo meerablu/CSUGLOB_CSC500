@@ -1,0 +1,23 @@
+My Pet Profiles (Manage information link) ------------------------------------------------- 
+| Pet Profiles (Total: [X]) | ------------------------------------------------- 
+| [{dogicon}] Bella | Girl Age: 3 yrs | [{bellicon} 1] | |---------------------------------------| 
+| [{caticon}] Max | Boy Age: 2 yrs | [{bellicon} 2] | |-----------------------------------------| 
+| [{rabbiticon}] Daisy | Girl Age: 1 yr | [{bellicon} 0] | |---------------------------------------|
+ 
+[++] Add Pet | 
+
+Upcoming Appointments (notification reminders) ------------------------------------------ 
+| [{calendaricon}] Bella - Vet Visit | 2025-07-15 10:00 | |-----------------------------------------------
+| [{calendaricon}] Max - Grooming | 2025-07-18 14:00 | |----------------------------------------------
+| [{calendaricon}] Daisy - Vaccination | 2025-07-20 09:00 | --------------------------------------------
+
+[++] Add appointment |
+
+Pet Reminders (notification regimens)------------------------------------------------- 
+| [{notificationicon}] Bella - Feed | Due: 7:00 AM | |----------------------------------------------| 
+| [{notificationicon}] Max - Medication | Due: 8:00 AM | |----------------------------------------|
+| [{notificationicon}] Daisy - Walk | Due: 6:00 PM | ----------------------------------------------|
+
+[++] Add Regimen |
+
+{homeicon} Back to Home] 

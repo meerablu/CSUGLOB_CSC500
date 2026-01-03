@@ -1,0 +1,12 @@
+-------------------------------------------------
+| ++ Add a Pet ++                                   |
+------------------------------------------------- 
+| [Pet Photo Upload Area] | | (Tap to add/change photo: camera/gallery) | -------------- | 
+Name of Pet: [_____________________] | ------------------------------------------------- | 
+Date of Birth: [______/______/______] | | (Date Picker) | ------------------------------ | 
+Pet Type: [Dog v] [Cat v] [Other v] | | (Dropdown/Segmented Control) |------------------ | 
+Gender: ( ) Male ( ) Female | | (Radio Buttons) | -------------------------------------- | 
+Breed: [_____________________] | | (Text Input/Search Dropdown) | ---------------------- | 
+Spayed/Neutered: [ Yes / No ] | | (Toggle Switch/Dropdown) | --------------------------- | 
+
+[Save] [Cancel] | ------------------------------------------------------   --------------|

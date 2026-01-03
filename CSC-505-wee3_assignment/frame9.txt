@@ -1,0 +1,10 @@
+Add Pet Special Regimen Care
+
+| [{dogicon} Pet Photo/Icon] |
+| Pet Name: [______________] (Dropdown: select pet) |
+| Feeding Schedule: | | Feed [ 2 ] times per day | | - Time 1: [: AM/PM] | | - Time 2: [: AM/PM] |
+| Potty Breaks: | | - Pee Time(s): [: AM/PM], [: AM/PM] | | - Poop Time(s): [: AM/PM], [: AM/PM] |
+| Special Treat: | | [ ] Give special treat once a week if pet behaves well | | - 
+Day of Week: [________] (Dropdown: e.g., Sunday) | | - Treat Type: [___________________] |
+| Additional Notes: | | [_____________________________________________________] |
+| [ Save Regimen ] [ Cancel ] (Prominent buttons) |
