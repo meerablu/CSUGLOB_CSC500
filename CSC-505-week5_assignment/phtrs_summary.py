@@ -330,5 +330,5 @@ print(f"*******************************************")
 print(f"WELCOME to PHTRS portal online !!! Date: {current_day} {current_month_name.upper()}, {current_year}")
 print(f"*******************************************")
 if __name__ ==  '__main__': phtrs_demo_proto(0,"")
-###############IDEAL Developer program end ###################################################
+############### program end ###################################################
 
