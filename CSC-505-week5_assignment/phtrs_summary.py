@@ -107,10 +107,12 @@ def phtrs_actorsession(actortype, pothole, person_name):
                 totphrequests =gettotalph_requests()
                 adminwantstodo = requeststrinput(f" Enter [1] Assign repair crew | [2] Mark repair status | [3] Resolve a Claim | [4] Update claim | Your selection = ","menuopt")   
                 if adminwantstodo == 1:             
-
+                    
                     if totphrequests > 0 :
-                        topdeckticketnumber = next(iter(my_dict.items()))
-                        topdeckticketnumber = requeststrinput("Please enter your ticket number (Enter 99 example for TNo:99): ","")
+                        printlistofpotholes(pothole)
+                        ticketnumber = requeststrinput("Please enter your ticket number (Enter 99 example for TNo:99): ","")
+                        retrievestatusofpotholerepair(ticketnumber,"assignjoborder")
+                        print(f"Thank you for working this request !!")
                     else:
                         print(f"***********There are no pending tickets at the moment.")
                                             
@@ -118,13 +120,44 @@ def phtrs_actorsession(actortype, pothole, person_name):
                     print(f"Total pothole service requests in queue = {totphrequests} ")                        
                    
                     ticketnumber = requeststrinput("Please enter your ticket number (Enter 99 example for TNo:99): ","")
-                    retrievestatusofpotholerepair(ticketnumber,"resolveit")
-                    print(f"Thank you for resolving this request !!")
+                    retrievestatusofpotholerepair(ticketnumber,"updaterepairstatus")
+                    print(f"Thank you for working this request !!")
 
+                elif adminwantstodo == 3:
+                       print(f"***********Helping your raise a damage claim")
+                       print(f"***********Apologies - this has not been implemented yet.")
+                elif adminwantstodo == 4:
+                       print(f"***********Helping your retrieve claim status")
+                       print(f"***********Apologies - this has not been implemented yet.")
+                       
         elif actortype == 3: # actor public works contractor 
                 print("*****************************************")
                 print(f"Welcome to the PHTRS - Public works Contractor system!")
                 loadph_serviceregistry() #read the registry
+                totphrequests =gettotalph_requests()
+                contractorwantstodo = requeststrinput(f" Enter [1] Review job orders | [2] Assign a crew | [3] Mark repair status | Your selection = ","menuopt")   
+                if contractorwantstodo == 1:             
+                    
+                    if totphrequests > 0 :
+                        printlistofpotholes(pothole)
+                        #ticketnumber = requeststrinput("Please enter your ticket number (Enter 99 example for TNo:99): ","")
+                        #retrievestatusofpotholerepair(ticketnumber,"assignjoborder")
+                        #print(f"Thank you for working this request !!"
+                    else:
+                        print(f"***********There is nothing at the moment!")
+                                            
+                elif contractorwantstodo == 2:
+                    print(f"Total pothole service requests in queue = {totphrequests} ")                        
+                   
+                    ticketnumber = requeststrinput("Please enter your ticket number (Enter 99 example for TNo:99): ","")
+                    retrievestatusofpotholerepair(ticketnumber,"assigncrew")
+                    print(f"Thank you for taking this request !!")
+
+                elif contractorwantstodo == 3:
+                    ticketnumber = requeststrinput("Please enter your ticket number (Enter 99 example for TNo:99): ","")
+                    retrievestatusofpotholerepair(ticketnumber,"resolveit")
+                    print(f"Thank you for completing this repair !!")
+                
 
     except Exception as e:
         print(f"An error occurred within func-phtrs_actorsession(): {e}. Exiting program.") 
@@ -210,39 +243,13 @@ def updatepotholetodict(self, phticketnum):
                     potholeticket = rconst[0]
                     potholeticket=potholeticket.replace("TNo:", "")
                     if potholeticket == phticketnum:
-                        #print(f"here wrote append for [{linebyline}] as")
                         updatedlinnes = updatedlinnes +f"TNo:{phticketnum}|{self.reporter_name}|{self.datereported}|{self.ph_severity}|{self.ph_size}|{self.ph_location}|{self.ph_address}|{self.repair_priority}|{self.fix_status}|{self.job_order}|{self.crewtype}"
-                        #with open(ph_regfile_path, "a") as file: #local text file for persistence storage                       
-                            #file.write(f"TNo:{phticketnum}|{self.reporter_name}|{self.datereported}|{self.ph_severity}|{self.ph_size}|{self.ph_location}|{self.ph_address}|{self.repair_priority}|{self.fix_status}|{self.job_order}|{self.crewtype}\n")            
-                    else:
-                        #print(f"whatis [{linebyline}]")
+                    else:                       
                         updatedlinnes = updatedlinnes +f"{linebyline}"
-
-        print(f"whatis [{updatedlinnes}]")
         with open(ph_regfile_path, "w") as file: #local text file for persistence storage                       
                     file.write(updatedlinnes)
         
-                   
-         
-                    """potholeobj.reporter_name = rconst[1]
-                    potholeobj.ph_severity = rconst[3]
-                    potholeobj.ph_size = rconst[4]
-                    potholeobj.ph_location = rconst[5]
-                    potholeobj.ph_address = rconst[6]
-                    potholeobj.repair_priority = rconst[7]
-                    potholeobj.datereported = rconst[2]
-                    potholeobj.fix_status = rconst[8]
-                    potholeobj.job_order = rconst[9]
-                    potholeobj.crewtype = rconst[10]
-        
-                    potholeticket = rconst[0]
-                    potholeticket=potholeticket.replace("TNo:", "")
-                    updatepotholetodict(potholeobj, potholeticket) """
-
-
-            #file.write(f"TNo:{phticketnum}|{self.reporter_name}|{self.datereported}|{self.ph_severity}|{self.ph_size}|{self.ph_location}|{self.ph_address}|{self.repair_priority}|{self.fix_status}|{self.job_order}|{self.crewtype}\n")
-        
-            
+                               
 def retrievestatusofpotholerepair(ticketnumber,attribute):
         tnumref = f"TNo:{ticketnumber}"
         if ph_serviceregistry.get(tnumref):
@@ -256,7 +263,25 @@ def retrievestatusofpotholerepair(ticketnumber,attribute):
                 print(f"This pothole was reported {userpotholeobj.datereported}")
                 userpotholeobj.fix_status="FIXED"
                 updatepotholetodict(userpotholeobj,ticketnumber)
-                print(f" Your {userpotholeobj.ph_severity} pothole's repair status is now: {userpotholeobj.fix_status.upper()}")
+                print(f" {ticketnumber} {userpotholeobj.ph_severity} pothole's repair status is now: {userpotholeobj.fix_status.upper()}")
+            elif attribute == "updaterepairstatus":
+                print(f"This pothole was reported {userpotholeobj.datereported}")
+                userpotholeobj.fix_status="Work in progress"
+                updatepotholetodict(userpotholeobj,ticketnumber)
+                print(f" {ticketnumber} {userpotholeobj.ph_severity} pothole's repair status is now: {userpotholeobj.fix_status.upper()}")
+            elif attribute == "assignjoborder":
+                print(f"This pothole was reported {userpotholeobj.datereported}")
+                userpotholeobj.job_order="assigned" 
+                updatepotholetodict(userpotholeobj,ticketnumber)
+                print(f" {ticketnumber} {userpotholeobj.ph_severity} pothole's has a job order assigned now: {userpotholeobj.job_order.upper()}")
+            elif attribute == "assigncrew":
+                print(f"This {ticketnumber} repair request was reported {userpotholeobj.datereported}")
+                if userpotholeobj.ph_severity=="urgent":
+                    userpotholeobj.crewtype="GroupA"
+                else:
+                    userpotholeobj.crewtype="GroupB"
+                updatepotholetodict(userpotholeobj,ticketnumber)
+                print(f" {ticketnumber} {userpotholeobj.ph_severity} pothole's has a job assigned to: {userpotholeobj.crewtype.upper()}")
 
             return ph_serviceregistry.get(ticketnumber)
         else:
@@ -265,8 +290,7 @@ def retrievestatusofpotholerepair(ticketnumber,attribute):
 def processpotholerepair():
         topdeckticketnumber = next(iter(ph_serviceregistry.items()))
         potholeobj = topdeckticketnumber.get(topdeckticketnumber.key())
-        print(f"Your next in queue ticket number is : {topdeckticketnumber.key()} : Opened by [{potholeobj.reporter_name}] on [{potholeobj.datereported}]")
-    
+        print(f"Your next in queue ticket number is : {topdeckticketnumber.key()} : Opened by [{potholeobj.reporter_name}] on [{potholeobj.datereported}]")    
         
 def gettotalph_requests():
         line_count = 0
@@ -284,11 +308,11 @@ def printlistofpotholes(self):
         for key, value in ph_serviceregistry.items():
             index += 1
             potholeobj = value
-            print(f" Pothole#{index} : {key} - Raised by {potholeobj.reporter_name} on {potholeobj.datereported}. ")
+            print(f" Pothole#{index} : {key} - Raised by {potholeobj.reporter_name} on {potholeobj.datereported}. Its severity is [{potholeobj.ph_severity}], [{potholeobj.repair_priority}] FP: {potholeobj.ph_severity} Status=[{potholeobj.fix_status}] ")
             
 class pothole: #defines the pothole class
     #location = middle of road, curb, size = 1-10, repair priority = urgent, canwait - crewtype can be groupA or groupB    
-    def __init__(self, reporter_name="", ph_severity="",ph_size="",ph_location="", ph_address="",repair_priority="", datereported="", fix_status="", job_order="", crewtype=""):         
+    def __init__(self, reporter_name="", ph_severity="",ph_size="",ph_location="", ph_address="",repair_priority="", datereported="", fix_status="OPEN", job_order="", crewtype=""):         
         self.reporter_name = reporter_name
         self.ph_severity = ph_severity
         self.ph_size = ph_size
@@ -301,7 +325,7 @@ class pothole: #defines the pothole class
         self.crewtype = crewtype
         
         
-###############IDEAL Developer program ###################################################
+###############PHTRS program ###################################################
 print(f"*******************************************")
 print(f"WELCOME to PHTRS portal online !!! Date: {current_day} {current_month_name.upper()}, {current_year}")
 print(f"*******************************************")
