@@ -109,7 +109,7 @@ def confirm_issuecheck(dollarvalue,check):
         print(f"An error occurred within func-confirm_issuecheck(): {e}. Exiting program.")
         sys.exit() # system exit
         
-def write_check(check): # main python program that accepts input from the citizen     
+def write_check(check): # main python program 
     try:        
         whileuserunexited = userwishestoexit()
         
