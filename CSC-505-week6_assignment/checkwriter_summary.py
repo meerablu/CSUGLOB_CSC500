@@ -1,4 +1,4 @@
-############### PHTRS program start ###################################################
+############### check writer program start ###################################################
 import sys # import basic sys library
 from array import array 
 from decimal import Decimal #for processing cents
