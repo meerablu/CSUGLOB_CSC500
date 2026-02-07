@@ -1,4 +1,4 @@
-############### PHTRS program start ###################################################
+############### ATM program start ###################################################
 import sys # import basic sys library
 import calendar #import calendar library to prettify the dates
 import os # checks the file path to ensure the account exists
