@@ -2,6 +2,7 @@
 import sys # import basic sys library
 import calendar #import calendar library to prettify the dates
 import os # checks the file path to ensure the account exists
+import time # wants to let user see the error message
 from datetime import datetime #import the date time library
     
 current_year = datetime.now().year #prints the current year
@@ -14,6 +15,7 @@ def userwishestoexit(): # function is used for exiting the program
         user_input = input("Press Enter to continue or Type Q to exit program! ")
         if user_input.upper() == 'Q': 
             print("Program will now exit...Thank you!")
+            time.sleep(3) # Pauses for 3 seconds
             sys.exit() # Exit gracefully
         else:
             return True # return to main for flow of execution
@@ -56,7 +58,7 @@ def requeststrinput(verbiage,inputtype,retry): # generic function defined to cap
                     print("Sorry! You have not entered any options. ") # user prompt for empty string
                     retry = retry+1
                     inputval =requeststrinput(f"{verbiage}","digit", retry)  
-                    #inputval = input(verbiage)
+                   
             elif inputtype == "digit":
                 if inputval!="":
                     if inputval.lower() == 'q': # if the user enters a q or Q the program ends
@@ -68,12 +70,11 @@ def requeststrinput(verbiage,inputtype,retry): # generic function defined to cap
                             print("Sorry! Your entry is Invalid. ") # user prompt for empty string
                             retry = retry+1
                             inputval =requeststrinput(f"{verbiage}","digit", retry)  
-                            #inputval = input(verbiage)
                 else:
                     print("Sorry! You have not entered any options. ") # user prompt for empty string
                     retry = retry+1
                     inputval =requeststrinput(f"{verbiage}","digit", retry)  
-                    #inputval = input(verbiage)
+                    
             elif inputtype == "pin":
                 if inputval!="":
                     if inputval.lower() == 'q': # if the user enters a q or Q the program ends
@@ -85,14 +86,10 @@ def requeststrinput(verbiage,inputtype,retry): # generic function defined to cap
                             print("Sorry! Your entry is Invalid! ") # user prompt for empty string
                             retry = retry+1
                             inputval =requeststrinput(f"{verbiage}","pin", retry)
-                            #inputval = input(verbiage)
-                else:
-                    print("Sorry! You have not entered any options. ") # user prompt for empty string
-                    retry = retry+1
-                    inputval =requeststrinput(f"{verbiage}","pin", retry)
-                    #inputval = input(verbiage)
+                
         else:
             print(f"Cancelling and Exiting program...Thank you!")
+            time.sleep(3) # Pauses for 3 seconds
             sys.exit() # calling system.exit                       
     except Exception as e:
         print(f"An error occurred within func-requeststrinput(): {e}. Exiting program.") 
@@ -110,6 +107,7 @@ def atm_menu(account,cardnumber):
                 elif int(amountwithdraw) == int(account.accbalance):
                     withdrawupdateaccount(account,amountwithdraw,cardnumber)
                     print(f"Success! ${amountwithdraw} has been withdrawn. Your account will be closed! Thank you!")
+                    time.sleep(3) # Pauses for 3 seconds
                     sys.exit() # system exit
                 else:
                     withdrawupdateaccount(account,amountwithdraw,cardnumber)
@@ -131,6 +129,7 @@ def atm_menu(account,cardnumber):
             case "4":
                 print("Process Exit************************")
                 print("Thank you!! Please Come Back another time!***********")
+                time.sleep(3) # Pauses for 3 seconds
                 sys.exit() # system exit
             case _:
                 print(f"*******************************************")
@@ -153,9 +152,10 @@ def atm_demo_proto(customer): # main python program
                 if check_ifaccountexists(cardnumber) == True:
                     accountobj = load_accountinformation(cardnumber)
                    
-                    authsuccess = authenticate_user(accountobj,0)
+                    authenticate_user(accountobj,pinattempts)
+                    authsuccess = accountobj.authstate
                     
-                    if authsuccess == True:
+                    if authsuccess == "True":
                         isactive = check_ifaccountisactive(accountobj)
                         if isactive == True:
                             print(f"*******************************************")
@@ -163,21 +163,26 @@ def atm_demo_proto(customer): # main python program
                             print(f"*******************************************")
                             atm_menu(accountobj,cardnumber)
                         else:
-                            print(f"Your account is Inactive $0 ! Exitting program.")
+                            print(f"Your account is Inactive with $0 ! Exitting program.")
+                            time.sleep(3) # Pauses for 3 seconds
                             sys.exit() # system exit                       
                     else:
-                        print(f"Your account is Invalid! Exitting program.")
+                        print(f"Your authorization is denied! Exitting program.")
+                        time.sleep(3) # Pauses for 3 seconds
                         sys.exit() # system exit
                 else:
-                    print(f"Your account is Invalid! Exitting program.")
+                    print(f"Your account is not found! Exitting program.")
+                    time.sleep(3) # Pauses for 3 seconds
                     sys.exit() # system exit
                         
     except Exception as e:
         print(f"An error occurred within func-atm_demo_proto(): {e}. Exiting program.")
+        time.sleep(3) # Pauses for 3 seconds
         sys.exit() # system exit
 
 
 ##################### program main ##################################################
+pinattempts = 0
 
 def check_ifaccountisactive(account):
     try:
@@ -187,20 +192,23 @@ def check_ifaccountisactive(account):
             return False
     except Exception as e:
         print(f"An error occurred within check_ifaccountexists(): {e}. Exiting program.")        
-  
+        
 def authenticate_user(account,pinattempts):
-    try:
+    try:        
         if pinattempts<3:
-            pinnumber = requeststrinput(f"Please enter your Pin: ","pin", 0)
-            if account.loginpass == pinnumber:
+            pinnumber = requeststrinput(f"Please enter your Pin: ","pin", pinattempts)
+            if str(account.loginpass) == str(pinnumber):
+                pinattempts=pinattempts
+                account.authstate = "True"
                 return True
             else:
                 pinattempts = pinattempts+1
-                authenticate_user(account,pinattempts)
+                pinnumber = authenticate_user(account,pinattempts)
         else:
             return False        
     except Exception as e:
         print(f"An error occurred within authenticate_user(): {e}. Exiting program.")        
+      
       
 def check_ifaccountexists(cardnumber):
     try:
@@ -254,11 +262,11 @@ def updateaccountfile(self, cardnumber, newbalance):
         print(f"An error occurred within func1-updateaccountfile(): {e}. Exiting program.")
        
 class account: #defines the account class
-    def __init__(self, loginuser="", loginpass="",accbalance=""):         
+    def __init__(self, loginuser="", loginpass="",accbalance="", authstate=""):         
         self.loginuser = loginuser
         self.loginpass = loginpass
+        self.authstate = authstate
         self.accbalance = accbalance       
-
 
 def withdrawupdateaccount(self, amount, cardnumber):      
     try:
@@ -273,7 +281,6 @@ def withdrawupdateaccount(self, amount, cardnumber):
     
     except Exception as e:
         print(f"An error occurred within func1-load_withdrawupdateaccount(): {e}. Exiting program.")
-
 
 def depositupdateaccount(self, amount, cardnumber):      
     try:
