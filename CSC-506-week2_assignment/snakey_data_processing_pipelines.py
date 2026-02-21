@@ -128,14 +128,14 @@ def binarysearch(geolocobj,sortedarrayobj,searchkey):
 
          while left <= right: # Calculate the middle index using integer division
              midind = (left + right) // 2
-        
+             
              if sortedarrayobj[midind].lower().strip()==searchkey.lower().strip():
                 foundvalue=sortedarrayobj[midind]
                 break
-             elif sortedarrayobj[midind] < searchkey.lower().strip():
+             elif sortedarrayobj[midind].lower().strip() < searchkey.lower().strip():
                 left = midind + 1  #search in right half
              else:
-                right = midind - 1 #searcg in left half    
+                right = midind - 1 #search in left half    
 
          if foundvalue != None:
              geoobj = geolocobj.findbyvalue(foundvalue)
