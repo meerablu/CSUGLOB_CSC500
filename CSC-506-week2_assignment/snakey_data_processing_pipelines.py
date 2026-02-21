@@ -52,11 +52,11 @@ def requeststrinput(verbiage,inputtype): # generic function for user input
   
 def currentprinttimeinms():
     try:
-       milliseconds =round(time.time() * 1000) #time function returns fraction in seconds 
+       microseconds =round(time.time() * 1000 * 1000) #time function returns fraction in seconds 
        """1 millisecond = 1000 microsecond 
           1 second = 1000 millisecond 
           60 second = 1 minute """
-       return milliseconds
+       return microseconds
     except Exception as e:
         print(f"An error occurred within currentprinttimeinms(): {e}. Exiting program.")
         sys.exit() # system exit
