@@ -139,7 +139,7 @@ def binarysearch(geolocobj,sortedarrayobj,searchkey):
 
          if foundvalue != None:
              geoobj = geolocobj.findbyvalue(foundvalue)
-             print(f"FOUND IT!!  {geoobj.zipcode} is {geoobj.city}")
+             print(f"FOUND IT!!  {geoobj.zipcode} is {geoobj.city} in {geoobj.state}. It is {geoobj.sqmi} Sq Miles. ")
          else:
              print(f"NOT FOUND!! {searchkey}")
              geoobj = None
@@ -159,7 +159,7 @@ def linearsearch(geolocobj,unsortedarrayobj,searchkey):
 
          if foundvalue != None:
              geoobj = geolocobj.findbyvalue(foundvalue)
-             print(f"Found It!!  {geoobj.zipcode} is {geoobj.city}")
+             print(f"FOUND IT!!  {geoobj.zipcode} is {geoobj.city} in {geoobj.state}. It is {geoobj.sqmi} Sq Miles. ")
          else:
              print(f"NOT FOUND!! {searchkey}")
              geoobj = None
