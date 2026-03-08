@@ -113,8 +113,10 @@ def operate_bakery(numsodo,numfoca,numbagu,batchcont_sodo,batchcont_bagu,batchco
              bakedbread = breadbakequeue.dequeue()
              breadpackers.addFront(bakedbread) #sell the old one first
              #print(f"===========>>>> {bakedbread} is BAKED.. now ready to Pack...")
-         
+
+         breadpackers.addRear("     ")
          breadpackers.examine_forward()
+         breadpackers.removeRear()
 
          breadpackers.display()
          #breadpackers.display_backward()
@@ -463,7 +465,7 @@ class breadpackagers_Deque: #doubly linked list
 
         """if cur_node is the tail , its previous is already one advanced element from the tail unfortunately
         because otherwise we wanted to remove from the next of tail which would mean None and this
-        posed a challenge to remove the last bread batch """
+        posed a challenge to remove the last bread batch - but it was overcome with a last tail element """
         prev_node = cur_node.previous
         if prev_node.previous:
             prev_node.previous.next = cur_node
@@ -481,11 +483,14 @@ class breadpackagers_Deque: #doubly linked list
         cur_node = self.head
         ind = 0
         while cur_node:
+            #if not curbread.startswith("rear"):
             print(f"... {cur_node}")
-            curbread = str(cur_node)[:5]
+            
+            curbread = str(cur_node)[:5]            
             nextbread = str(cur_node.next)[:5]
             ind = ind+1
-            if curbread != nextbread:
+            #print(f"curbread is {curbread} n nextbread {nextbread}") 
+            if curbread != nextbread and not curbread.startswith("    ") :
                 rejectbatch = requeststrinput(f"Accept this batch? Y/N ","")
                 if rejectbatch.upper() != "Y":
                     print(f"Rejecting {curbread} batch....Last {ind} breads")                    
