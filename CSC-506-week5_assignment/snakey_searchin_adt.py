@@ -96,7 +96,7 @@ def snakey_test_adt():
                
                 populatemaxheap( babylistheapqueue)
                 print(f"Heap size populated: {len(babylistheapqueue)} ")               
-                print(f"Max node: {babylistheapqueue.read_max().value} ")
+                print(f"Max node: {babylistheapqueue.peek_max().value} ")
                
                 #Now we attempt to search in the Max heap using priority keys - linear search
                 searchinmaxheap(babylistheapqueue)
@@ -106,7 +106,7 @@ def snakey_test_adt():
                     #print(f"Hash table size populated: {babylisthashtable.size} with Elem count= {babylisthashtable.count} ")
                     babylistheapqueue.delete()                
                     print(f"After Deleting highest priority Baby==>> Heap size populated: {len(babylistheapqueue)} ")
-                    print(f"Max node: {babylistheapqueue.read_max().value} ")
+                    print(f"Max node: {babylistheapqueue.peek_max().value} ")
                     searchinmaxheap(babylistheapqueue)  
             
     except Exception as e:
@@ -331,7 +331,7 @@ class MaxHeapPriorityQueue:
         # act of restoring the max heap structure, heapifying it up
         self._heapify_up(len(self.maxheap) - 1)
 
-    def delete(self): #the delete function here for priority queue is deleting the maximum value or root node
+    def delete(self): #the delete function here for priority queue is deleting the maximum value or root node / extract_max
         if not self.maxheap:
             return None
         max_node = self.maxheap[0]
@@ -341,7 +341,7 @@ class MaxHeapPriorityQueue:
         self._heapify_down(0) #restoring the balance and structure of the max heap by running heapify down 
         return max_node #returning the max node 
 
-    def read_max(self):
+    def peek_max(self):
         if not self.maxheap: 
             return None
         return self.maxheap[0] #because this is the priority queue with max heap, the root is the node with the greatest value or maxim
