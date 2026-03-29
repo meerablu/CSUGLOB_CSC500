@@ -1,0 +1,576 @@
+[
+	{
+		"owner_id": "o01",
+		"owner_name": "Snakey Montaineer",
+		"pet_type": "Cat",
+		"breed": "Turkish Van",
+		"count": 2
+	},
+	{
+		"owner_id": "o01",
+		"owner_name": "Snakey Montaineer",
+		"pet_type": "Dog",
+		"breed": "Samoyed",
+		"count": 1
+	},
+	{
+		"owner_id": "o02",
+		"owner_name": "Jamie Brooks",
+		"pet_type": "Cat",
+		"breed": "Siamese",
+		"count": 1
+	},
+	{
+		"owner_id": "o02",
+		"owner_name": "Jamie Brooks",
+		"pet_type": "Cat",
+		"breed": "Bengal",
+		"count": 1
+	},
+	{
+		"owner_id": "o02",
+		"owner_name": "Jamie Brooks",
+		"pet_type": "Dog",
+		"breed": "Golden Retriever",
+		"count": 1
+	},
+	{
+		"owner_id": "o03",
+		"owner_name": "Morgan Lee",
+		"pet_type": "Cat",
+		"breed": "Turkish Van",
+		"count": 1
+	},
+	{
+		"owner_id": "o04",
+		"owner_name": "Riley Nguyen",
+		"pet_type": "Cat",
+		"breed": "Sphynx",
+		"count": 1
+	},
+	{
+		"owner_id": "o04",
+		"owner_name": "Riley Nguyen",
+		"pet_type": "Dog",
+		"breed": "Border Collie",
+		"count": 1
+	},
+	{
+		"owner_id": "o05",
+		"owner_name": "Taylor Alvarez",
+		"pet_type": "Cat",
+		"breed": "Bengal",
+		"count": 1
+	},
+	{
+		"owner_id": "o05",
+		"owner_name": "Taylor Alvarez",
+		"pet_type": "Dog",
+		"breed": "Golden Retriever",
+		"count": 1
+	},
+	{
+		"owner_id": "o06",
+		"owner_name": "Jordan Kim",
+		"pet_type": "Cat",
+		"breed": "Siamese",
+		"count": 1
+	},
+	{
+		"owner_id": "o07",
+		"owner_name": "Casey Patel",
+		"pet_type": "Cat",
+		"breed": "Maine Coon",
+		"count": 1
+	},
+	{
+		"owner_id": "o07",
+		"owner_name": "Casey Patel",
+		"pet_type": "Dog",
+		"breed": "Labrador Retriever",
+		"count": 1
+	},
+	{
+		"owner_id": "o08",
+		"owner_name": "Drew Thompson",
+		"pet_type": "Cat",
+		"breed": "Persian",
+		"count": 1
+	},
+	{
+		"owner_id": "o08",
+		"owner_name": "Drew Thompson",
+		"pet_type": "Dog",
+		"breed": "Bulldog",
+		"count": 1
+	},
+	{
+		"owner_id": "o09",
+		"owner_name": "Quinn Ramirez",
+		"pet_type": "Cat",
+		"breed": "Siamese",
+		"count": 1
+	},
+	{
+		"owner_id": "o10",
+		"owner_name": "Avery Collins",
+		"pet_type": "Cat",
+		"breed": "Maine Coon",
+		"count": 1
+	},
+	{
+		"owner_id": "o10",
+		"owner_name": "Avery Collins",
+		"pet_type": "Cat",
+		"breed": "Turkish Van",
+		"count": 1
+	},
+	{
+		"owner_id": "o10",
+		"owner_name": "Avery Collins",
+		"pet_type": "Dog",
+		"breed": "Golden Retriever",
+		"count": 1
+	},
+	{
+		"owner_id": "o11",
+		"owner_name": "Sam Whitaker",
+		"pet_type": "Cat",
+		"breed": "Bengal",
+		"count": 1
+	},
+	{
+		"owner_id": "o12",
+		"owner_name": "Logan Price",
+		"pet_type": "Cat",
+		"breed": "Siamese",
+		"count": 1
+	},
+	{
+		"owner_id": "o12",
+		"owner_name": "Logan Price",
+		"pet_type": "Dog",
+		"breed": "Border Collie",
+		"count": 1
+	},
+	{
+		"owner_id": "o13",
+		"owner_name": "Devon Foster",
+		"pet_type": "Cat",
+		"breed": "Persian",
+		"count": 1
+	},
+	{
+		"owner_id": "o14",
+		"owner_name": "Parker Sullivan",
+		"pet_type": "Cat",
+		"breed": "Sphynx",
+		"count": 1
+	},
+	{
+		"owner_id": "o14",
+		"owner_name": "Parker Sullivan",
+		"pet_type": "Dog",
+		"breed": "German Shepherd",
+		"count": 1
+	},
+	{
+		"owner_id": "o15",
+		"owner_name": "Reese Montgomery",
+		"pet_type": "Cat",
+		"breed": "Maine Coon",
+		"count": 1
+	},
+	{
+		"owner_id": "o16",
+		"owner_name": "Cameron Ortiz",
+		"pet_type": "Cat",
+		"breed": "Bengal",
+		"count": 1
+	},
+	{
+		"owner_id": "o16",
+		"owner_name": "Cameron Ortiz",
+		"pet_type": "Dog",
+		"breed": "Bulldog",
+		"count": 1
+	},
+	{
+		"owner_id": "o17",
+		"owner_name": "Blake Henderson",
+		"pet_type": "Cat",
+		"breed": "Siamese",
+		"count": 1
+	},
+	{
+		"owner_id": "o18",
+		"owner_name": "Sydney Wallace",
+		"pet_type": "Cat",
+		"breed": "Persian",
+		"count": 1
+	},
+	{
+		"owner_id": "o18",
+		"owner_name": "Sydney Wallace",
+		"pet_type": "Dog",
+		"breed": "Labrador Retriever",
+		"count": 1
+	},
+	{
+		"owner_id": "o19",
+		"owner_name": "Rowan Mitchell",
+		"pet_type": "Cat",
+		"breed": "Sphynx",
+		"count": 1
+	},
+	{
+		"owner_id": "o20",
+		"owner_name": "Jesse Park",
+		"pet_type": "Cat",
+		"breed": "Bengal",
+		"count": 1
+	},
+	{
+		"owner_id": "o20",
+		"owner_name": "Jesse Park",
+		"pet_type": "Dog",
+		"breed": "Golden Retriever",
+		"count": 1
+	},
+	{
+		"owner_id": "o21",
+		"owner_name": "Noah Bennett",
+		"pet_type": "Cat",
+		"breed": "Siamese",
+		"count": 1
+	},
+	{
+		"owner_id": "o22",
+		"owner_name": "Mila Rosen",
+		"pet_type": "Cat",
+		"breed": "Maine Coon",
+		"count": 1
+	},
+	{
+		"owner_id": "o22",
+		"owner_name": "Mila Rosen",
+		"pet_type": "Cat",
+		"breed": "Turkish Van",
+		"count": 1
+	},
+	{
+		"owner_id": "o22",
+		"owner_name": "Mila Rosen",
+		"pet_type": "Dog",
+		"breed": "Border Collie",
+		"count": 1
+	},
+	{
+		"owner_id": "o23",
+		"owner_name": "Ethan Delgado",
+		"pet_type": "Cat",
+		"breed": "Sphynx",
+		"count": 1
+	},
+	{
+		"owner_id": "o24",
+		"owner_name": "Priya Shah",
+		"pet_type": "Cat",
+		"breed": "Persian",
+		"count": 1
+	},
+	{
+		"owner_id": "o25",
+		"owner_name": "Lucas Marino",
+		"pet_type": "Cat",
+		"breed": "Bengal",
+		"count": 1
+	},
+	{
+		"owner_id": "o25",
+		"owner_name": "Lucas Marino",
+		"pet_type": "Dog",
+		"breed": "German Shepherd",
+		"count": 1
+	},
+	{
+		"owner_id": "o26",
+		"owner_name": "Hannah O’Neil",
+		"pet_type": "Cat",
+		"breed": "Siamese",
+		"count": 1
+	},
+	{
+		"owner_id": "o27",
+		"owner_name": "Victor Santos",
+		"pet_type": "Cat",
+		"breed": "Maine Coon",
+		"count": 1
+	},
+	{
+		"owner_id": "o27",
+		"owner_name": "Victor Santos",
+		"pet_type": "Dog",
+		"breed": "Samoyed",
+		"count": 1
+	},
+	{
+		"owner_id": "o28",
+		"owner_name": "Naomi Feldman",
+		"pet_type": "Cat",
+		"breed": "Persian",
+		"count": 1
+	},
+	{
+		"owner_id": "o29",
+		"owner_name": "Chris Ionescu",
+		"pet_type": "Cat",
+		"breed": "Bengal",
+		"count": 1
+	},
+	{
+		"owner_id": "o29",
+		"owner_name": "Chris Ionescu",
+		"pet_type": "Dog",
+		"breed": "Bulldog",
+		"count": 1
+	},
+	{
+		"owner_id": "o30",
+		"owner_name": "Fatima Hassan",
+		"pet_type": "Cat",
+		"breed": "Sphynx",
+		"count": 1
+	},
+	{
+		"owner_id": "o31",
+		"owner_name": "Owen McKay",
+		"pet_type": "Cat",
+		"breed": "Maine Coon",
+		"count": 1
+	},
+	{
+		"owner_id": "o31",
+		"owner_name": "Owen McKay",
+		"pet_type": "Dog",
+		"breed": "Golden Retriever",
+		"count": 1
+	},
+	{
+		"owner_id": "o32",
+		"owner_name": "Lila Choudhury",
+		"pet_type": "Cat",
+		"breed": "Siamese",
+		"count": 1
+	},
+	{
+		"owner_id": "o33",
+		"owner_name": "Ben Kowalski",
+		"pet_type": "Cat",
+		"breed": "Bengal",
+		"count": 1
+	},
+	{
+		"owner_id": "o33",
+		"owner_name": "Ben Kowalski",
+		"pet_type": "Dog",
+		"breed": "Border Collie",
+		"count": 1
+	},
+	{
+		"owner_id": "o34",
+		"owner_name": "Sofia Petrov",
+		"pet_type": "Cat",
+		"breed": "Persian",
+		"count": 1
+	},
+	{
+		"owner_id": "o35",
+		"owner_name": "Marcus Johnson",
+		"pet_type": "Cat",
+		"breed": "Maine Coon",
+		"count": 1
+	},
+	{
+		"owner_id": "o35",
+		"owner_name": "Marcus Johnson",
+		"pet_type": "Dog",
+		"breed": "Labrador Retriever",
+		"count": 1
+	},
+	{
+		"owner_id": "o36",
+		"owner_name": "Elena Ruiz",
+		"pet_type": "Cat",
+		"breed": "Sphynx",
+		"count": 1
+	},
+	{
+		"owner_id": "o37",
+		"owner_name": "Daniel Cho",
+		"pet_type": "Cat",
+		"breed": "Siamese",
+		"count": 1
+	},
+	{
+		"owner_id": "o37",
+		"owner_name": "Daniel Cho",
+		"pet_type": "Dog",
+		"breed": "German Shepherd",
+		"count": 1
+	},
+	{
+		"owner_id": "o38",
+		"owner_name": "Anika Verma",
+		"pet_type": "Cat",
+		"breed": "Persian",
+		"count": 1
+	},
+	{
+		"owner_id": "o39",
+		"owner_name": "Paul Fischer",
+		"pet_type": "Cat",
+		"breed": "Bengal",
+		"count": 1
+	},
+	{
+		"owner_id": "o39",
+		"owner_name": "Paul Fischer",
+		"pet_type": "Dog",
+		"breed": "Samoyed",
+		"count": 1
+	},
+	{
+		"owner_id": "o40",
+		"owner_name": "Yara Haddad",
+		"pet_type": "Cat",
+		"breed": "Siamese",
+		"count": 1
+	},
+	{
+		"owner_id": "o41",
+		"owner_name": "Colin Murphy",
+		"pet_type": "Cat",
+		"breed": "Maine Coon",
+		"count": 1
+	},
+	{
+		"owner_id": "o42",
+		"owner_name": "Tessa Laurent",
+		"pet_type": "Cat",
+		"breed": "Bengal",
+		"count": 1
+	},
+	{
+		"owner_id": "o42",
+		"owner_name": "Tessa Laurent",
+		"pet_type": "Dog",
+		"breed": "Border Collie",
+		"count": 1
+	},
+	{
+		"owner_id": "o43",
+		"owner_name": "Mateo Rivas",
+		"pet_type": "Cat",
+		"breed": "Sphynx",
+		"count": 1
+	},
+	{
+		"owner_id": "o43",
+		"owner_name": "Mateo Rivas",
+		"pet_type": "Dog",
+		"breed": "Golden Retriever",
+		"count": 1
+	},
+	{
+		"owner_id": "o44",
+		"owner_name": "Ingrid Svensson",
+		"pet_type": "Cat",
+		"breed": "Persian",
+		"count": 1
+	},
+	{
+		"owner_id": "o44",
+		"owner_name": "Ingrid Svensson",
+		"pet_type": "Dog",
+		"breed": "Labrador Retriever",
+		"count": 1
+	},
+	{
+		"owner_id": "o45",
+		"owner_name": "Amir Rahimi",
+		"pet_type": "Cat",
+		"breed": "Siamese",
+		"count": 1
+	},
+	{
+		"owner_id": "o46",
+		"owner_name": "Brooke Daniels",
+		"pet_type": "Cat",
+		"breed": "Maine Coon",
+		"count": 1
+	},
+	{
+		"owner_id": "o46",
+		"owner_name": "Brooke Daniels",
+		"pet_type": "Dog",
+		"breed": "Bulldog",
+		"count": 1
+	},
+	{
+		"owner_id": "o47",
+		"owner_name": "Julian Meyer",
+		"pet_type": "Cat",
+		"breed": "Bengal",
+		"count": 1
+	},
+	{
+		"owner_id": "o48",
+		"owner_name": "Nisha Kulkarni",
+		"pet_type": "Cat",
+		"breed": "Sphynx",
+		"count": 1
+	},
+	{
+		"owner_id": "o48",
+		"owner_name": "Nisha Kulkarni",
+		"pet_type": "Dog",
+		"breed": "German Shepherd",
+		"count": 1
+	},
+	{
+		"owner_id": "o49",
+		"owner_name": "Theo Wallace",
+		"pet_type": "Cat",
+		"breed": "Persian",
+		"count": 1
+	},
+	{
+		"owner_id": "o49",
+		"owner_name": "Theo Wallace",
+		"pet_type": "Dog",
+		"breed": "Golden Retriever",
+		"count": 1
+	},
+	{
+		"owner_id": "o50",
+		"owner_name": "Valentina Costa",
+		"pet_type": "Cat",
+		"breed": "Maine Coon",
+		"count": 1
+	},
+	{
+		"owner_id": "o50",
+		"owner_name": "Valentina Costa",
+		"pet_type": "Cat",
+		"breed": "Turkish Van",
+		"count": 1
+	},
+	{
+		"owner_id": "o50",
+		"owner_name": "Valentina Costa",
+		"pet_type": "Dog",
+		"breed": "Border Collie",
+		"count": 1
+	}
+]
