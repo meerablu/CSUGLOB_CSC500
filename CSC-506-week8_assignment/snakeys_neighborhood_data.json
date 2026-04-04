@@ -1,0 +1,402 @@
+[
+	{
+		"id": "H01",
+		"type": "house",
+		"homeowner": "Daniel Carter",
+		"householdCount": 3,
+		"address": "101 Snakey Road Lane",
+		"connectsToIntersection": "I01"
+	},
+	{
+		"id": "H02",
+		"type": "house",
+		"homeowner": "Maria Lopez",
+		"householdCount": 5,
+		"address": "102 Snakey Road Lane",
+		"connectsToIntersection": "I01"
+	},
+	{
+		"id": "H03",
+		"type": "house",
+		"homeowner": "James Patel",
+		"householdCount": 2,
+		"address": "103 Snakey Road Lane",
+		"connectsToIntersection": "I01"
+	},
+	{
+		"id": "H04",
+		"type": "house",
+		"homeowner": "Aisha Rahman",
+		"householdCount": 4,
+		"address": "104 Snakey Road Lane",
+		"connectsToIntersection": "I02"
+	},
+	{
+		"id": "H05",
+		"type": "house",
+		"homeowner": "Michael Nguyen",
+		"householdCount": 3,
+		"address": "105 Snakey Road Lane",
+		"connectsToIntersection": "I02"
+	},
+	{
+		"id": "H06",
+		"type": "house",
+		"homeowner": "Sarah Thompson",
+		"householdCount": 1,
+		"address": "106 Snakey Road Lane",
+		"connectsToIntersection": "I02"
+	},
+	{
+		"id": "H07",
+		"type": "house",
+		"homeowner": "Robert Kim",
+		"householdCount": 4,
+		"address": "201 Snakey Road Lane",
+		"connectsToIntersection": "I04"
+	},
+	{
+		"id": "H08",
+		"type": "house",
+		"homeowner": "Emily Johnson",
+		"householdCount": 2,
+		"address": "202 Snakey Road Lane",
+		"connectsToIntersection": "I04"
+	},
+	{
+		"id": "H09",
+		"type": "house",
+		"homeowner": "Omar Hassan",
+		"householdCount": 6,
+		"address": "203 Snakey Road Lane",
+		"connectsToIntersection": "I04"
+	},
+	{
+		"id": "H10",
+		"type": "house",
+		"homeowner": "Priya Singh",
+		"householdCount": 3,
+		"address": "204 Snakey Road Lane",
+		"connectsToIntersection": "I05"
+	},
+	{
+		"id": "H11",
+		"type": "house",
+		"homeowner": "Snakey Montaneer",
+		"householdCount": 12,
+		"address": "205 Snakey Road Lane",
+		"connectsToIntersection": "I05"
+	},
+	{
+		"id": "H12",
+		"type": "house",
+		"homeowner": "Fatima Ali",
+		"householdCount": 5,
+		"address": "206 Snakey Road Lane",
+		"connectsToIntersection": "I05"
+	},
+	{
+		"id": "H13",
+		"type": "house",
+		"homeowner": "Carlos Ramirez",
+		"householdCount": 4,
+		"address": "301 Snakey Road Lane",
+		"connectsToIntersection": "I07"
+	},
+	{
+		"id": "H14",
+		"type": "house",
+		"homeowner": "Hannah Brooks",
+		"householdCount": 1,
+		"address": "302 Snakey Road Lane",
+		"connectsToIntersection": "I07"
+	},
+	{
+		"id": "H15",
+		"type": "house",
+		"homeowner": "Ahmed Saleh",
+		"householdCount": 3,
+		"address": "303 Snakey Road Lane",
+		"connectsToIntersection": "I07"
+	},
+	{
+		"id": "H16",
+		"type": "house",
+		"homeowner": "Linda Chen",
+		"householdCount": 2,
+		"address": "304 Snakey Road Lane",
+		"connectsToIntersection": "I08"
+	},
+	{
+		"id": "H17",
+		"type": "house",
+		"homeowner": "Joshua Wilson",
+		"householdCount": 4,
+		"address": "305 Snakey Road Lane",
+		"connectsToIntersection": "I08"
+	},
+	{
+		"id": "H18",
+		"type": "house",
+		"homeowner": "Nina Kapoor",
+		"householdCount": 3,
+		"address": "306 Snakey Road Lane",
+		"connectsToIntersection": "I08"
+	},
+	{
+		"id": "H19",
+		"type": "house",
+		"homeowner": "Ethan Moore",
+		"householdCount": 2,
+		"address": "401 Snakey Road Lane",
+		"connectsToIntersection": "I03"
+	},
+	{
+		"id": "H20",
+		"type": "house",
+		"homeowner": "Sofia Martinez",
+		"householdCount": 5,
+		"address": "402 Snakey Road Lane",
+		"connectsToIntersection": "I03"
+	},
+	{
+		"id": "H21",
+		"type": "house",
+		"homeowner": "Noah Anderson",
+		"householdCount": 1,
+		"address": "403 Snakey Road Lane",
+		"connectsToIntersection": "I03"
+	},
+	{
+		"id": "H22",
+		"type": "house",
+		"homeowner": "Leila Haddad",
+		"householdCount": 4,
+		"address": "404 Snakey Road Lane",
+		"connectsToIntersection": "I06"
+	},
+	{
+		"id": "H23",
+		"type": "house",
+		"homeowner": "Brian O'Connor",
+		"householdCount": 2,
+		"address": "405 Snakey Road Lane",
+		"connectsToIntersection": "I06"
+	},
+	{
+		"id": "H24",
+		"type": "house",
+		"homeowner": "Yuki Tanaka",
+		"householdCount": 3,
+		"address": "406 Snakey Road Lane",
+		"connectsToIntersection": "I06"
+	},
+	{
+		"id": "H25",
+		"type": "house",
+		"homeowner": "Samuel Brooks",
+		"householdCount": 5,
+		"address": "501 Snakey Road Lane",
+		"connectsToIntersection": "I09"
+	},
+	{
+		"id": "H26",
+		"type": "house",
+		"homeowner": "Isabella Rossi",
+		"householdCount": 2,
+		"address": "502 Snakey Road Lane",
+		"connectsToIntersection": "I09"
+	},
+	{
+		"id": "H27",
+		"type": "house",
+		"homeowner": "Victor Petrov",
+		"householdCount": 1,
+		"address": "503 Snakey Road Lane",
+		"connectsToIntersection": "I09"
+	},
+	{
+		"id": "H28",
+		"type": "house",
+		"homeowner": "Grace Liu",
+		"householdCount": 3,
+		"address": "601 Snakey Road Lane",
+		"connectsToIntersection": "I01"
+	},
+	{
+		"id": "H29",
+		"type": "house",
+		"homeowner": "Anthony Brown",
+		"householdCount": 4,
+		"address": "602 Snakey Road Lane",
+		"connectsToIntersection": "I01"
+	},
+	{
+		"id": "H30",
+		"type": "house",
+		"homeowner": "Maya Desai",
+		"householdCount": 3,
+		"address": "603 Snakey Road Lane",
+		"connectsToIntersection": "I02"
+	},
+	{
+		"id": "H31",
+		"type": "house",
+		"homeowner": "Snakey Bubaneer",
+		"householdCount": 5,
+		"address": "604 Snakey Road Lane",
+		"connectsToIntersection": "I02"
+	},
+	{
+		"id": "H32",
+		"type": "house",
+		"homeowner": "Elena Petrova",
+		"householdCount": 1,
+		"address": "605 Snakey Road Lane",
+		"connectsToIntersection": "I03"
+	},
+	{
+		"id": "H33",
+		"type": "house",
+		"homeowner": "Jacob Stein",
+		"householdCount": 3,
+		"address": "606 Snakey Road Lane",
+		"connectsToIntersection": "I03"
+	},
+	{
+		"id": "H34",
+		"type": "house",
+		"homeowner": "Paul Henderson",
+		"householdCount": 4,
+		"address": "701 Snakey Road Lane",
+		"connectsToIntersection": "I04"
+	},
+	{
+		"id": "H35",
+		"type": "house",
+		"homeowner": "Rina Mukherjee",
+		"householdCount": 2,
+		"address": "702 Snakey Road Lane",
+		"connectsToIntersection": "I05"
+	},
+	{
+		"id": "H36",
+		"type": "house",
+		"homeowner": "Steven Park",
+		"householdCount": 3,
+		"address": "703 Snakey Road Lane",
+		"connectsToIntersection": "I05"
+	},
+	{
+		"id": "H37",
+		"type": "house",
+		"homeowner": "Claire Dubois",
+		"householdCount": 1,
+		"address": "704 Snakey Road Lane",
+		"connectsToIntersection": "I06"
+	},
+	{
+		"id": "H38",
+		"type": "house",
+		"homeowner": "Mohammed Idris",
+		"householdCount": 5,
+		"address": "705 Snakey Road Lane",
+		"connectsToIntersection": "I06"
+	},
+	{
+		"id": "H39",
+		"type": "house",
+		"homeowner": "Natalie Evans",
+		"householdCount": 2,
+		"address": "801 Snakey Road Lane",
+		"connectsToIntersection": "I07"
+	},
+	{
+		"id": "H40",
+		"type": "house",
+		"homeowner": "Kevin O'Brien",
+		"householdCount": 4,
+		"address": "802 Snakey Road Lane",
+		"connectsToIntersection": "I08"
+	},
+	{
+		"id": "H41",
+		"type": "house",
+		"homeowner": "Amira Khalil",
+		"householdCount": 3,
+		"address": "803 Snakey Road Lane",
+		"connectsToIntersection": "I08"
+	},
+	{
+		"id": "H42",
+		"type": "house",
+		"homeowner": "Lucas Moretti",
+		"householdCount": 2,
+		"address": "804 Snakey Road Lane",
+		"connectsToIntersection": "I09"
+	},
+	{
+		"id": "H43",
+		"type": "house",
+		"homeowner": "Helen Wright",
+		"householdCount": 1,
+		"address": "901 Snakey Road Lane",
+		"connectsToIntersection": "I02"
+	},
+	{
+		"id": "H44",
+		"type": "house",
+		"homeowner": "Diego Morales",
+		"householdCount": 4,
+		"address": "902 Snakey Road Lane",
+		"connectsToIntersection": "I03"
+	},
+	{
+		"id": "H45",
+		"type": "house",
+		"homeowner": "Samantha Green",
+		"householdCount": 3,
+		"address": "903 Snakey Road Lane",
+		"connectsToIntersection": "I04"
+	},
+	{
+		"id": "H46",
+		"type": "house",
+		"homeowner": "Rahul Mehta",
+		"householdCount": 5,
+		"address": "904 Snakey Road Lane",
+		"connectsToIntersection": "I05"
+	},
+	{
+		"id": "H47",
+		"type": "house",
+		"homeowner": "Monica Alvarez",
+		"householdCount": 2,
+		"address": "905 Snakey Road Lane",
+		"connectsToIntersection": "I06"
+	},
+	{
+		"id": "H48",
+		"type": "house",
+		"homeowner": "Benjamin Scott",
+		"householdCount": 4,
+		"address": "1001 Snakey Road Lane",
+		"connectsToIntersection": "I07"
+	},
+	{
+		"id": "H49",
+		"type": "house",
+		"homeowner": "Laila Noor",
+		"householdCount": 3,
+		"address": "1002 Snakey Road Lane",
+		"connectsToIntersection": "I08"
+	},
+	{
+		"id": "H50",
+		"type": "house",
+		"homeowner": "Oscar Jensen",
+		"householdCount": 1,
+		"address": "1003 Snakey Road Lane",
+		"connectsToIntersection": "I09"
+	}
+]

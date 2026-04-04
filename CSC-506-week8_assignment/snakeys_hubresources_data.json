@@ -1,0 +1,119 @@
+{
+  "supplyHubs": [
+    {
+      "hubId": "S01",
+      "name": "North Community Supply Hub",
+      "address": "10 North Relief Way",
+      "locatedAtIntersection": "I02",
+      "inventory": {
+        "water": 600,
+        "grains": 220,
+        "rice": 300,
+        "pasta": 200,
+        "driedcorn": 180,
+        "beans": 0,
+        "flour": 240,
+        "medicine": 120,
+        "firstaid": 90,
+        "bandaids": 500,
+        "torches": 80,
+        "batteries": 300,
+        "oil": 150,
+        "bags": 400,
+        "paper": 600
+      }
+    },
+    {
+      "hubId": "S02",
+      "name": "East Emergency Distribution Center",
+      "address": "45 East Support Avenue",
+      "locatedAtIntersection": "I03",
+      "inventory": {
+        "water": 520,
+        "grains": 200,
+        "rice": 260,
+        "pasta": 2,
+        "driedcorn": 150,
+        "beans": 0,
+        "flour": 210,
+        "medicine": 100,
+        "firstaid": 75,
+        "bandaids": 420,
+        "torches": 65,
+        "batteries": 260,
+        "oil": 130,
+        "bags": 350,
+        "paper": 520
+      }
+    },
+    {
+      "hubId": "S03",
+      "name": "Central Neighborhood Supply Hub",
+      "address": "100 Central Aid Boulevard",
+      "locatedAtIntersection": "I05",
+      "inventory": {
+        "water": 800,
+        "grains": 300,
+        "rice": 400,
+        "pasta": 280,
+        "driedcorn": 250,
+        "beans": 0,
+        "flour": 330,
+        "medicine": 160,
+        "firstaid": 120,
+        "bandaids": 700,
+        "torches": 120,
+        "batteries": 450,
+        "oil": 200,
+        "bags": 550,
+        "paper": 800
+      }
+    },
+    {
+      "hubId": "S04",
+      "name": "West Side Relief Hub",
+      "address": "77 West Recovery Road",
+      "locatedAtIntersection": "I07",
+      "inventory": {
+        "water": 480,
+        "grains": 180,
+        "rice": 240,
+        "pasta": 160,
+        "driedcorn": 140,
+        "beans": 0,
+        "flour": 190,
+        "medicine": 90,
+        "firstaid": 70,
+        "bandaids": 380,
+        "torches": 55,
+        "batteries": 230,
+        "oil": 110,
+        "bags": 300,
+        "paper": 450
+      }
+    },
+    {
+      "hubId": "S05",
+      "name": "South Emergency Supply Point",
+      "address": "5 South Assistance Drive",
+      "locatedAtIntersection": "I08",
+      "inventory": {
+        "water": 560,
+        "grains": 210,
+        "rice": 280,
+        "pasta": 190,
+        "driedcorn": 165,
+        "beans": 1,
+        "flour": 225,
+        "medicine": 110,
+        "firstaid": 85,
+        "bandaids": 460,
+        "torches": 70,
+        "batteries": 290,
+        "oil": 140,
+        "bags": 380,
+        "paper": 540
+      }
+    }
+  ]
+}
