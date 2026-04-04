@@ -109,8 +109,11 @@ def snakey_givepeople_foodwater():
            tend = currentprinttimeinms()
            print(f"Elapse time bubble sort: {int(tend)-int(tstart)}")
            
+           tstart = currentprinttimeinms()
            requestqueue.show_lowest_k_requests(1,snakeyhouses) # we also run quick select to derive the lowest priority req.
-
+           tend = currentprinttimeinms()
+           print(f"Elapse time Quick select: {int(tend)-int(tstart)}") 
+            
            service_dispatch_loop(requestqueue, snakeyhubs) #ability to mark down the requests as done as well
 
            tstart = currentprinttimeinms()
@@ -123,7 +126,10 @@ def snakey_givepeople_foodwater():
            tend = currentprinttimeinms()
            print(f"Elapse time bubble sort: {int(tend)-int(tstart)}")
            
+           tstart = currentprinttimeinms()
            requestqueue.show_lowest_k_requests(1,snakeyhouses)
+           tend = currentprinttimeinms()
+           print(f"Elapse time Quick select: {int(tend)-int(tstart)}")
            
            if not exitprogram():
                break                        
@@ -253,7 +259,7 @@ def prompt_valid_resources(houseid, houses, hubs, graph):
                 available_map[res] = filtered if filtered else hubs_for_res
 
         if not available_map:
-            print("No ptions available. Try different items.")
+            print("No options available. Try different items.")
             continue
 
         print("\nPartial fulfillment can be made with the following:")
@@ -791,8 +797,8 @@ class RequestQueue:
             print("No pending requests.")
             return
 
-        snapshot_sorted = sorted(self.heap)
-        for urg, dist, ts, request in snapshot_sorted:
+        copylist = sorted(self.heap)
+        for urg, dist, ts, request in copylist:
             house = houses.get_house(request.houseid)
             route_str = " -> ".join(request.path)
 
@@ -809,7 +815,7 @@ class RequestQueue:
             
 
     def print_family_only_bubblesorted_requests(self, houses): # bubble set sorts it by family size first , rescue the largest family first above all concept
-        print("\nPending Requests – Family-Only (Hh-Count ↓ only)")
+        print("\nPending Requests – Sorted by Family Count")
         print("------------------------------------------------")
 
         if not self.heap:
